@@ -1,13 +1,17 @@
 import React from 'react'
 import { NavContainer, NavContainerLinks, NavLinks } from './NavBar.Style'
 
-const NavBar = () => {
+const NavBar = ({color}) => {
   return (
     <NavContainer>
-        <NavContainerLinks>
-            <NavLinks>Home</NavLinks>
-            <NavLinks>Contact</NavLinks>
-            <NavLinks>About US</NavLinks>
+        <NavContainerLinks >
+           
+            <NavLinks to={'/home'}>Home</NavLinks>
+
+            <NavLinks to={'/contact'}>Contact</NavLinks>
+
+            <NavLinks to={'/about'}>About US</NavLinks>
+
         </NavContainerLinks>
     </NavContainer>
   )

@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     
     html{
         scroll-behavior  :smooth ;
+        overflow: hidden;
     }
 
     `
@@ -22,9 +23,10 @@ flex-direction: column;
 justify-content:flex-end;
 align-items: center;
 background: ${({color})=>(color ? "#000" : "#fff")};
-color: ${({color})=>(color ? "#fff" : "#000")};
+color: ${({color})=>(color ? "#fff" : "#4b5563")};
 font-size: 1rem;
 font-family: 'Poppins',sans-serif;
+font-weight: 500;
 transition: all 0.25s ease;
 padding-top: 1rem;
 `
@@ -34,6 +36,7 @@ display:flex;
 justify-content: flex-end;
 align-items: center;
 margin: auto;
+padding-right: 1rem;
 `
 
 export const ToggleOn = styled(BsToggleOn)`
