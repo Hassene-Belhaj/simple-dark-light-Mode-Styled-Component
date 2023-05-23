@@ -11,7 +11,7 @@ width: 60%;
 height: 100%;
 padding-top: 10rem;
 margin: auto;
-color:${({color}) => (color ? '#ecfccb' : 'indigo')} ;
+color:${({color}) => (color ? '#ecfccb' : 'orangered')} ;
 `
 
 

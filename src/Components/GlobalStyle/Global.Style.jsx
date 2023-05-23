@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import { styled } from 'styled-components'
-import { BsToggleOn,BsToggleOff } from 'react-icons/bs'
+import { BsFillMoonFill,BsFillSunFill } from 'react-icons/bs'
 
 export const GlobalStyle = createGlobalStyle`
     *{
@@ -39,9 +39,11 @@ margin: auto;
 padding-right: 1rem;
 `
 
-export const ToggleOn = styled(BsToggleOn)`
+export const ToggleOn = styled(BsFillMoonFill)`
+margin-right: 1rem;
 cursor: pointer;
 `
-export const ToggleOff = styled(BsToggleOff)`
+export const ToggleOff = styled(BsFillSunFill)`
+margin-right: 1rem;
 cursor: pointer;
 `

@@ -22,8 +22,7 @@ const App = () => {
        <GlobalStyle />
       <Container color={color ? 1 : 0 }>
         <DivToggle onClick={HandleToggle}>
-          <p style={{marginRight:"1rem",fontSize:"0.9rem"}}>Light & Dark Mode</p>
-         {toggle ?  <ToggleOn size={30}/>: <ToggleOff size={30}/> }   
+         {toggle ?  <ToggleOn size={30}/>: <ToggleOff color='orangered' size={30}/> }   
         </DivToggle>
         <NavBar />
         <Routes>
