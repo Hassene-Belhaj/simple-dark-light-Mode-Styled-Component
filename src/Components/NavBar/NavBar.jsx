@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavContainer, NavContainerLinks, NavLinks } from './NavBar.Style'
 
-const NavBar = ({color}) => {
+const NavBar = ({theme}) => {
   return (
     <NavContainer>
         <NavContainerLinks >

@@ -8,18 +8,18 @@ height: 100vh;
 text-align: center;
 `
 const Div = styled.div`
-width: 60%;
+width: 100%;
 height: 100%;
 padding-top: 10rem;
 margin: auto;
-color:${({color}) => (color ? '#ecfccb' : 'orangered')} ;
+color:${({theme}) => (theme==="dark" ? "red":"blue")} ;
 `
 
 
-const Home = ({color}) => {
+const Home = ({theme}) => {
   return (
   <Container>
-   <Div color={color ? 1 : 0}>
+   <Div theme={theme}>
     <p>home</p>
    </Div>
   </Container>

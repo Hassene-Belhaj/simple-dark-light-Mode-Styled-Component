@@ -12,15 +12,15 @@ width: 60%;
 height: 100%;
 padding-top: 10rem;
 margin: auto;
-color:${({color}) => (color ? '#ecfccb' : 'orangered')} ;
+color:${({theme}) => (theme.color)} ;
 
 `
 
 
-const About = ({color}) => {
+const About = ({theme}) => {
   return (
     <Container>
-  <Div color={color ? 1 :0}>
+  <Div theme={theme}>
    about us
   </Div>
       </Container>

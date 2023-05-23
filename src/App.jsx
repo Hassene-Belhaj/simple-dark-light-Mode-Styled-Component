@@ -6,31 +6,43 @@ import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import Home from './Components/Home'
 import Contact from './Components/Contact'
 import About from './Components/About'
+import { ThemeProvider } from 'styled-components'
+
 
 const App = () => {
-
-    const [color,setColor]  = useLocalStorage(false)
-    const [toggle,setToggle] = useLocalStorage(false)
+    const [theme,setTheme]  = useLocalStorage("dark")
   
     const HandleToggle = () => {
-        setToggle(!toggle)
-        setColor(!color) 
+    theme ==="dark" ? setTheme("light") : setTheme("dark")
     }
+
+    const light = {
+      background : "#fff",
+      color : "#000"
+    }
+
+    const dark = {
+      background : "#000",
+      color : "#fff"
+    }
+
     
     return (
       <Router>
-       <GlobalStyle />
-      <Container color={color ? 1 : 0}>
-        <DivToggle onClick={HandleToggle}>
-         {toggle ?  <ToggleOn size={30}/>: <ToggleOff color='orangered' size={30}/> }   
-        </DivToggle>
-        <NavBar />
-        <Routes>
-          <Route path='/home' element={<Home color={color}/>} />
-          <Route path='/contact' element={<Contact color={color}/>} />
-          <Route path='/about' element={<About color={color}/>} />
-        </Routes>
-      </Container>
+        <ThemeProvider theme={theme === "dark" ? light : dark}>
+            <GlobalStyle />
+            <Container>
+              <DivToggle onClick={HandleToggle}>
+              {theme==="dark" ?  <ToggleOn size={30}/>: <ToggleOff color='#FFB766' size={30}/> }   
+              </DivToggle>
+              <NavBar />
+              <Routes>
+                <Route path='/home' element={<Home theme={theme}/>} />
+                <Route path='/contact' element={<Contact theme={theme}/>} />
+                <Route path='/about' element={<About theme={theme}/>} />
+              </Routes>
+            </Container>
+        </ThemeProvider>
       </Router>
     )
     

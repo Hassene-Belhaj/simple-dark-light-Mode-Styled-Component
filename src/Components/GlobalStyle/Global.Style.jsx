@@ -12,6 +12,9 @@ export const GlobalStyle = createGlobalStyle`
     html{
         scroll-behavior  :smooth ;
         overflow: hidden;
+        background: ${({theme})=>(theme.background)};
+        color: ${({theme})=>(theme.color)};
+        transition: all 0.3s ease-in;
     }
 
     `
@@ -22,8 +25,6 @@ display: flex;
 flex-direction: column;
 justify-content:flex-end;
 align-items: center;
-background: ${({color})=>(color ? "#000" : "#fff")};
-color: ${({color})=>(color ? "#fff" : "#4b5563")};
 font-size: 1rem;
 font-family: 'Poppins',sans-serif;
 font-weight: 500;
