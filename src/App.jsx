@@ -20,15 +20,15 @@ const App = () => {
     return (
       <Router>
        <GlobalStyle />
-      <Container color={color ? 1 : 0 }>
+      <Container color={color ? 1 : 0}>
         <DivToggle onClick={HandleToggle}>
          {toggle ?  <ToggleOn size={30}/>: <ToggleOff color='orangered' size={30}/> }   
         </DivToggle>
         <NavBar />
         <Routes>
-          <Route path='/home' element={<Home color={color ? 1: 0}/>} />
-          <Route path='/contact' element={<Contact color={color ? 1: 0}/>} />
-          <Route path='/about' element={<About color={color ? 1: 0}/>} />
+          <Route path='/home' element={<Home color={color}/>} />
+          <Route path='/contact' element={<Contact color={color}/>} />
+          <Route path='/about' element={<About color={color}/>} />
         </Routes>
       </Container>
       </Router>
