@@ -28,5 +28,5 @@ align-content: center;
 export const NavLinks =styled(Link)`
 font-size: 1.2rem;
 text-decoration: none;
-color:inherit;
+color:${({theme})=>theme.color};
 `

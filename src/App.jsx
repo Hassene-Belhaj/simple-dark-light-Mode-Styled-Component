@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, DivToggle, GlobalStyle, ToggleOff, ToggleOn } from './Components/GlobalStyle/Global.Style'
-import useLocalStorage, { uselocalStorage } from 'use-local-storage'
+import useLocalStorage from 'use-local-storage'
 import NavBar from './Components/NavBar/NavBar'
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import Home from './Components/Home'
@@ -38,8 +38,8 @@ const App = () => {
               <NavBar />
               <Routes>
                 <Route path='/home' element={<Home theme={theme}/>} />
-                <Route path='/contact' element={<Contact theme={theme}/>} />
-                <Route path='/about' element={<About theme={theme}/>} />
+                <Route path='/contact' element={<Contact />} />
+                <Route path='/about' element={<About />} />
               </Routes>
             </Container>
         </ThemeProvider>

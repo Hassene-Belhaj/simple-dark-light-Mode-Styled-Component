@@ -13,6 +13,7 @@ height: 100%;
 padding-top: 10rem;
 margin: auto;
 color:${({theme}) => (theme==="dark" ? "red":"blue")} ;
+transition: all 0.25 ease;
 `
 
 

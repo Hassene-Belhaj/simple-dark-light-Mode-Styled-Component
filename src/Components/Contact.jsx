@@ -15,10 +15,10 @@ color:${({theme}) => (theme.color)} ;
 `
 
 
-const Contact = ({theme}) => {
+const Contact = ({}) => {
   return (
     <Container>
-  <Div theme={theme}>
+  <Div>
 contact
   </Div>
     </Container>

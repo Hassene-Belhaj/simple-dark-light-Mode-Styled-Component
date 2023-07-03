@@ -13,14 +13,13 @@ height: 100%;
 padding-top: 10rem;
 margin: auto;
 color:${({theme}) => (theme.color)} ;
-
 `
 
 
 const About = ({theme}) => {
   return (
     <Container>
-  <Div theme={theme}>
+  <Div>
    about us
   </Div>
       </Container>

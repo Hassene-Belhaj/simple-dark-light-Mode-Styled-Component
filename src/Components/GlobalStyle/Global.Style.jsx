@@ -3,6 +3,7 @@ import { styled } from 'styled-components'
 import { BsFillMoonFill,BsFillSunFill } from 'react-icons/bs'
 
 export const GlobalStyle = createGlobalStyle`
+
     *{
         box-sizing: border-box;
         padding: 0;
@@ -10,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     html{
-        scroll-behavior  :smooth ;
+        scroll-behavior:smooth ;
         overflow: hidden;
         background: ${({theme})=>(theme.background)};
         color: ${({theme})=>(theme.color)};
