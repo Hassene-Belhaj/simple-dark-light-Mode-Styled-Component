@@ -5,9 +5,9 @@ import { BsFillMoonFill,BsFillSunFill } from 'react-icons/bs'
 export const GlobalStyle = createGlobalStyle`
 
     *{
-        box-sizing: border-box;
-        padding: 0;
         margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
     
     html{
@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
         overflow: hidden;
         background: ${({theme})=>(theme.background)};
         color: ${({theme})=>(theme.color)};
-        transition: all 0.3s ease-in;
+        transition: ${({theme})=>theme.transition};
     }
 
     `
@@ -30,8 +30,10 @@ font-size: 1rem;
 font-family: 'Poppins',sans-serif;
 font-weight: 500;
 transition: all 0.25s ease;
-padding-top: 1rem;
+padding-top: 8px;
 `
+
+
 export const DivToggle = styled.div`
 width: 100%;
 display:flex;
@@ -42,10 +44,10 @@ padding-right: 1rem;
 `
 
 export const ToggleOn = styled(BsFillMoonFill)`
-margin-right: 1rem;
+margin: 1rem;
 cursor: pointer;
 `
 export const ToggleOff = styled(BsFillSunFill)`
-margin-right: 1rem;
+margin: 1rem;
 cursor: pointer;
 `

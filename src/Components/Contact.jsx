@@ -11,11 +11,10 @@ width: 60%;
 height: 100%;
 padding-top: 10rem;
 margin: auto;
-color:${({theme}) => (theme.color)} ;
 `
 
 
-const Contact = ({}) => {
+const Contact = () => {
   return (
     <Container>
   <Div>

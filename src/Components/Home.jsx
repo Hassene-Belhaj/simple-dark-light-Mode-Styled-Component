@@ -12,7 +12,7 @@ width: 100%;
 height: 100%;
 padding-top: 10rem;
 margin: auto;
-color:${({theme}) => (theme==="dark" ? "red":"blue")} ;
+color:${({theme}) => (theme==="dark" ? "blue":"orange")} ;
 transition: all 0.25 ease;
 `
 

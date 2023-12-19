@@ -18,12 +18,14 @@ const App = () => {
 
     const light = {
       background : "#fff",
-      color : "#000"
+      color : "#000" ,
+      transition : "0.4s ease-in-out"
     }
 
     const dark = {
       background : "#000",
-      color : "#fff"
+      color : "#fff",
+      transition : "0.4s ease-in-out"
     }
 
     
@@ -33,7 +35,9 @@ const App = () => {
             <GlobalStyle />
             <Container>
               <DivToggle onClick={HandleToggle}>
-              {theme==="dark" ?  <ToggleOn size={30}/>: <ToggleOff color='#FFB766' size={30}/> }   
+                {theme==="dark" ?  <ToggleOn size={20}/>
+                : 
+                <ToggleOff color='#fff' size={20}/> }   
               </DivToggle>
               <NavBar />
               <Routes>
